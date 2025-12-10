@@ -3,21 +3,28 @@ Minimal LangGraph-like backend workflow engine built with FastAPI. Supports node
 
 # How to Run
 
-installation:
+Installation
+
 pip install fastapi uvicorn pydantic networkx matplotlib websockets
-Start Server:
+
+Start Server
+
 bash
 uvicorn main:app --reload
+
 Open http://127.0.0.1:8000/docs for interactive API docs.
 
 Test Workflow using FastAPI docs (http://127.0.0.1:8000/docs)
+
 Create Graph (POST /graph/create):
+
 <img width="1103" height="865" alt="Screenshot 2025-12-11 001330" src="https://github.com/user-attachments/assets/5341d740-472e-4178-803e-f7d4a6b48172" />
 
 
 Copy the returned graph_id.
 
 Run Graph (POST /graph/run):
+
 <img width="1022" height="865" alt="Screenshot 2025-12-11 001400" src="https://github.com/user-attachments/assets/9e59f7b6-90fb-43bc-bcb9-2d04b43b90e9" />
 
 
@@ -30,6 +37,7 @@ Use a WebSocket client (for example, “Simple WebSocket Client” browser exten
 Connect to ws://127.0.0.1:8000/ws/graph/run.
 
 Send the JSON payload with your graph_id and initial_state.
+
 <img width="1920" height="1020" alt="Screenshot 2025-12-11 013622" src="https://github.com/user-attachments/assets/82ba9fb4-3299-4a92-8b67-e482b06cb5ac" />
 
 Observe streamed events for each node execution and the final state.
