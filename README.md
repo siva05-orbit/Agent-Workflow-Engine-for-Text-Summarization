@@ -1,9 +1,11 @@
 # Agent-Workflow-Engine-for-Text-Summarization
 Minimal LangGraph-like backend workflow engine built with FastAPI. Supports nodes, shared state, linear edges, conditional branching, and loops. Implements Option B: rule-based text summarization + refinement workflow.
 
-How to Run
+#How to Run
+
+installation:
 pip install fastapi uvicorn pydantic networkx matplotlib websockets
-Start Server
+Start Server:
 bash
 uvicorn main:app --reload
 Open http://127.0.0.1:8000/docs for interactive API docs.
@@ -57,7 +59,7 @@ FastAPI Docs: Interactive Swagger UI at /docs
 
 Example Workflow: Rule-based summarization pipeline (split → summarize → merge → refine → loop until summary_ok).
 
-What I Would Improve with More Time
+#What I Would Improve with More Time
 Persistent Storage: SQLite/Postgres for graphs and runs instead of in-memory dicts
 
 Dynamic Tool Registration: POST /tools/register API endpoint
